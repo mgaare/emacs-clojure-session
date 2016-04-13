@@ -1,11 +1,12 @@
 * Emacs keybinding cheatsheet
 
 This cheatsheet includes some non-standard bindings that correspond
-with my recommended tweaks. If you elected not to enable those tweaks,
-then use the [standard key bindings cheat
-sheet](./cheatsheet-standard.org).
+with my recommended tweaks.
 
 ** Basics
+
+C-x :: Prefix for globally available commands
+C-c :: prefix for mode-specific commands
 
 *** Files
 
@@ -13,7 +14,7 @@ sheet](./cheatsheet-standard.org).
 |---------+---------------------------|
 | C-x C-f | "find file" - open a file |
 | C-x C-s | save current buffer       |
-| C-x C-a | "save as"                 |
+| C-x C-w | "save as"                 |
 
 Since we enabled Helm mode, we have a fancy-pants interface for "find
 file" that includes these bindings:
@@ -34,6 +35,8 @@ file" that includes these bindings:
 | C-p     | "previous line", eg up arrow for the lazy |
 | M-f     | go forward by one "word"                  |
 | M-b     | go backward by one "word"                 |
+| C-a     | Beginning of the line                     |
+| C-e     | End of the line                           |
 | C-v     | Page down                                 |
 | M-v     | Page up                                   |
 | M-g M-g | goto line                                 |
@@ -42,13 +45,94 @@ file" that includes these bindings:
 
 *** Text manipulation
 
-| Key     | Command                        |
-|---------+--------------------------------|
-| C-d     | Delete character at point      |
-| M-d     | Forward delete word            |
-| C-space | activate "mark" for selection  |
-| M-w     | Copy region to kill ring       |
-| C-w     | Cut word at point              |
-| C-c C-k | Cut (kill) region              |
-| C-y     | Paste (yank) from kill ring    |
-| M-y     | Bring up the kill ring history |
+| Key     | Command                                |
+|---------+----------------------------------------|
+| C-d     | Delete character at point              |
+| M-d     | Forward delete word                    |
+| C-space | activate "mark" for selection          |
+| M-w     | Copy region to kill ring               |
+| C-w     | Cut word at point                      |
+| C-k     | Kill the whole line from where you are |
+| C-c C-k | Cut (kill) region                      |
+| C-y     | Paste (yank) from kill ring            |
+| M-y     | Bring up the kill ring history         |
+
+*** Window and buffer management
+
+| Key         | Command                              |
+|-------------+--------------------------------------|
+| C-x 0       | Close current window                 |
+| C-x 1       | Close all other windows              |
+| C-x 2       | Split window vertically              |
+| C-x 3       | Split window horizontally            |
+| C-x <left>  | Undo last window change              |
+| C-x <right> | Redo last window undo                |
+| C-x o       | Rotate through your windows          |
+| C-x O       | Rotates the other direction          |
+| C-x b       | Switch to a different buffer         |
+| C-x C-b     | Buffer management mode               |
+| C-x k       | Kill current buffer (or another one) |
+|             |                                      |
+
+** Globally useful things
+
+| Key   | Command                                                          |
+|-------+------------------------------------------------------------------|
+| C-g   | Cancel                                                           |
+| q     | Quit a modal (like a stacktrace, help window, etc)               |
+| M-x   | Execute a command (super useful! definitely memorize this!!!!!!) |
+| C-x m | Open eterm terminal                                              |
+
+** Getting help
+
+| Key   | Command                                        |
+|-------+------------------------------------------------|
+| C-h m | Help for mode                                  |
+| C-h a | "apropos", info on function, mode, or variable |
+| C-h k | info about a key binding                       |
+| C-h t | tutorial                                       |
+
+** Git (magit mode)
+
+| Key     | Command                                         |
+|---------+-------------------------------------------------|
+| C-x g   | Enter git status from any git-controlled buffer |
+| <tab>   | Universal expand/contract                       |
+| s       | Stage file/hunk/selection                       |
+| u       | Unstage                                         |
+| ?       | Universal help                                  |
+| c       | Commit                                          |
+| g       | refresh (updates if files have changed)         |
+| C-c C-c | Do commit (from commit message editor)          |
+| C-c C-k | Abord commit (from commit message editor)       |
+
+** Clojure stuff
+
+| Key     | Command                                        |
+|---------+------------------------------------------------|
+| C-c M-j | "Jack in" - open a new REPL                    |
+| C-c C-z | Switch to the REPL/switch back                 |
+| C-c C-d | Docs prefix                                    |
+| C-c C-k | Compile current file                           |
+| M-.     | Jump to source                                 |
+| M-,     | Go back                                        |
+| C-c M-i | Inspect any object                             |
+| C-c e   | Eval expression and replace with the value     |
+| C-c C-e | Eval expression and don't replace, show result |
+
+
+*** Inspector
+
+| Key | Command                     |
+|-----+-----------------------------|
+| RET | Go to the thing under point |
+| l   | Go back                     |
+
+** Package management
+
+| Key                       | Command                       |
+|---------------------------+-------------------------------|
+| M-x package-list-packages | Bring up package list         |
+| i                         | Mark package for installation |
+| d                         | Mark package for deletion     |
+| x                         | Execute our changes           |
