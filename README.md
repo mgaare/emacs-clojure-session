@@ -1,4 +1,5 @@
-### Some optional tweaks I recommend# emacs-clojure-session
+# emacs-clojure-session
+
 Resources for getting going with Emacs and Clojure
 
 Everything in here is just a suggestion, based on my own opinions
@@ -7,6 +8,7 @@ development. Think of this like a pair of shoes that you can try on,
 walk around in a little bit, and take off if it's not for you.
 
 ## Initial setup
+
 Let's get started!
 
 ### Emacs in OSX
@@ -58,7 +60,8 @@ Following along on the [key bindings cheat sheet](./cheatsheet-custom.org).
 
 ### Some optional tweaks I recommend
 
-
+Add the files from the `/personal` directory in this repository to
+your `~/.emacs.d/personal` directory.
 
 ## Getting Help
 
@@ -67,6 +70,9 @@ Following along on the [key bindings cheat sheet](./cheatsheet-custom.org).
   available keybindings
 - `C-h a` is "appropos" - search for documentation on functions, modes, etc.
 - `C-h k` and then hit a key combo for information on what it's bound to
+
+For really getting the keybindings into your head/fingers, I very
+strongly recommend (https://www.shortcutfoo.com/app/dojos/emacs).
 
 Googling "how do I <whatever> in emacs" almost always numerous useful
 results, with the probable downside that you will end up learning a
