@@ -1,0 +1,54 @@
+* Emacs keybinding cheatsheet
+
+This cheatsheet includes some non-standard bindings that correspond
+with my recommended tweaks. If you elected not to enable those tweaks,
+then use the [standard key bindings cheat
+sheet](./cheatsheet-standard.org).
+
+** Basics
+
+*** Files
+
+| Key     | Action                    |
+|---------+---------------------------|
+| C-x C-f | "find file" - open a file |
+| C-x C-s | save current buffer       |
+| C-x C-a | "save as"                 |
+
+Since we enabled Helm mode, we have a fancy-pants interface for "find
+file" that includes these bindings:
+
+| Key | Action                          |
+|-----+---------------------------------|
+| C-j | "jump" into directory           |
+| C-l | go up one level                 |
+| RET | open the file, or the directory |
+
+*** Navigation
+
+| Key     | Command                                   |
+|---------+-------------------------------------------|
+| C-f     | "forward", eg right arrow for the lazy    |
+| C-b     | "back", eg left arrow for the lazy        |
+| C-n     | "next line", eg down arrow for the lazy   |
+| C-p     | "previous line", eg up arrow for the lazy |
+| M-f     | go forward by one "word"                  |
+| M-b     | go backward by one "word"                 |
+| C-v     | Page down                                 |
+| M-v     | Page up                                   |
+| M-g M-g | goto line                                 |
+| M->     | goto end of buffer                        |
+| M-<     | goto beginning of buffer                  |
+
+*** Text manipulation
+
+| Key     | Command                        |
+|---------+--------------------------------|
+| C-d     | Delete character at point      |
+| M-d     | Forward delete word            |
+| C-space | activate "mark" for selection  |
+| M-w     | Copy region to kill ring       |
+| C-w     | Cut word at point              |
+| C-c C-k | Cut (kill) region              |
+| C-y     | Paste (yank) from kill ring    |
+| M-y     | Bring up the kill ring history |
