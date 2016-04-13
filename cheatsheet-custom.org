@@ -5,8 +5,8 @@ with my recommended tweaks.
 
 ** Basics
 
-C-x :: Prefix for globally available commands
-C-c :: prefix for mode-specific commands
+- C-x :: Prefix for globally available commands
+- C-c :: prefix for mode-specific commands
 
 *** Files
 
